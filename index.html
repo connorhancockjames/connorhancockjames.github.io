@@ -123,6 +123,31 @@ body {
 	<center><a class="twitter-timeline" data-width="220" data-height="200" href="https://twitter.com/GORLeague" data-tweet-limit="1">
 </a>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></center>
+	<br>
+	<center>
+		
+	Twitch Stream:
+		
+    <div id="twitch-embed"></div>
+		
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+    <script type="text/javascript">
+      var embed = new Twitch.Embed("twitch-embed", {
+        width: 854,
+        height: 480,
+        channel: "gorleague",
+        layout: "video",
+        autoplay: false,
+      });
+
+      embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
+        var player = embed.getPlayer();
+        player.play();
+      });
+    </script>
+	</center>
+		  
 	</section>
 	
 <script>
